@@ -1,0 +1,15 @@
+# node.js
+#
+node_modules/
+
+# IntelliJ
+#
+.idea
+
+# production
+#
+
+dist
+
+# misc
+.DS_Store
