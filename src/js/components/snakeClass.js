@@ -24,23 +24,23 @@ export default class Snake {
         this.newSegmentCount = 0;
         this.updateFoodLocation();
     }
-    turnRight() {
-        this.directionX = 1;
-        this.directionY = 0;
-    }
     turnLeft() {
         this.directionX = -1;
         this.directionY = 0;
     }
-    turnDown() {
-        this.directionX = 0;
-        this.directionY = 1;
+    turnRight() {
+        this.directionX = 1;
+        this.directionY = 0;
     }
     turnUp() {
         this.directionX = 0;
         this.directionY = -1;
     }
-    move() {
+    turnDown() {
+        this.directionX = 0;
+        this.directionY = 1;
+    }
+    moveSnake() {
         this.x += this.directionX;
         this.y += this.directionY;
 
@@ -66,17 +66,16 @@ export default class Snake {
         if (_contains(this.segments, this.foodLocation)) {
             this.updateFoodLocation();
             incrementScore();
-            this.newSegmentCount += options.segmentGrowth;
+            this.newSegmentCount += options.segmentIncreaseBy;
         }
 
         if (this.newSegmentCount === 0) {
             const last = this.segments.shift();
             eraseCell(last);
         } else {
-            this.newSegmentCount -= options.segmentGrowth;
+            this.newSegmentCount -= options.segmentIncreaseBy;
         }
     }
-
     updateFoodLocation() {
         const freeCellArray = [];
         const colLen = options.cols;
