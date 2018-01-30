@@ -2,11 +2,11 @@
  
  (ES6) implementation of the "snake" arcade game
 
-#Setup
+# Setup
 
 - Install dependencies `npm install`
 
-#Running on your desktop
+# Running on your desktop
 
 - do an `npm start` from terminal in the root directory 
 
