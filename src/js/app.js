@@ -17,7 +17,7 @@ function gameInit() {
     function _nextFrame() {
         clearTimeout(timeout);
         timeout = setTimeout(_nextFrame, options.timeInterval);
-        snake.move();
+        snake.moveSnake();
     }
     _nextFrame();
 
