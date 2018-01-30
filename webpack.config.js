@@ -1,12 +1,12 @@
 module.exports = {
     entry: {
-        main: './src/app.js'
+        main: './src/js/app.js'
     },
     output: {
-        filename: './dist/scripts/combined.js'
+        filename: './dist/scripts/bundle.js'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
@@ -14,6 +14,11 @@ module.exports = {
                 query: {
                     presets: ['es2015']
                 }
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: ['babel-loader', 'eslint-loader']
             }
         ]
     }

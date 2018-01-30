@@ -10,7 +10,14 @@
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3"
+  },
   "scripts": {
     "build": "./node_modules/webpack/bin/webpack.js -p",
     "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline"
